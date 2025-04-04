@@ -97,12 +97,12 @@ while True:
                         print('Carona compartilhada.')
 
                 voltar = input('Gostaria de voltar ao menu principal (s/n): ')
-                if vizualizar.lower() != 's':
+                if voltar.lower() != 's':
                     print('Obrigado, até a proxima vez.')
                     break
             
 
-        if escolha == 2:
+        elif escolha == 2:
             print('Iniciando Verificação de nível de sustentabilidade.')
 
             while True:
@@ -161,46 +161,47 @@ while True:
                 except ValueError:
                     print('\033[091mA escolha do meio de transporte deve ser um valor numérico válido! Tente novamente.\033[m')
 
-                print('\033 [091mTabela de Sustentabilidade.\033[m')
+            print('\033[094mTabela de Sustentabilidade.\033[m')
 
-                print("Classificação de Água:")
-                if litros_agua < 150:
-                    print("\033[92mAlta sustentabilidade.\033[m.")
-                elif litros_agua >= 150 and litros_agua < 200:
-                    print("\033[93mMédia sustentabilidade.\033[m.")
-                else:
-                    print("\033[91mBaixa sustentabilidade.\033[m.")
+            print("Classificação de Água:")
+            if litros_agua < 150:
+                print("\033[92mAlta sustentabilidade.\033[m")
+            elif litros_agua >= 150 and litros_agua < 200:
+                print("\033[93mMédia sustentabilidade.\033[m")
+            else:
+                print("\033[91mBaixa sustentabilidade.\033[m")
 
-                print("Classificação de Energia elétrica:")
-                if energia < 5:
-                    print("\033[92mAlta sustentabilidade.\033[m.")
-                elif energia >= 5 and energia < 10:
-                    print("\033[93mMédia sustentabilidade.\033[m.")
-                else:
-                    print("\033[91mBaixa sustentabilidade.\033[m.")
-                
-                print('Classificação de Residuos :')
-                if residuo_porcentagem > 50:
-                    print('\033[92mAlta sustentabilidade.\033[m.')
-                elif residuo_porcentagem >= 20 and residuo_porcentagem < 50:
-                    print('\033[93mMédia sustentabilidade.\033[m.')
-                else:
-                    print('\033[91mBaixa sustentabilidade.\033[m.')
+            print("Classificação de Energia elétrica:")
+            if energia < 5:
+                print("\033[92mAlta sustentabilidade.\033[m")
+            elif energia >= 5 and energia < 10:
+                print("\033[93mMédia sustentabilidade.\033[m")
+            else:
+                print("\033[91mBaixa sustentabilidade.\033[m")
+            
+            print('Classificação de Residuos :')
+            if residuo_porcentagem > 50:
+                print('\033[92mAlta sustentabilidade.\033[m')
+            elif residuo_porcentagem >= 20 and residuo_porcentagem < 50:
+                print('\033[93mMédia sustentabilidade.\033[m')
+            else:
+                print('\033[91mBaixa sustentabilidade.\033[m')
 
-                print('Uso de transporte:')
-                if meio_transporte == 2 or meio_transporte == 3 or meio_transporte == 5:
-                    print('\033[92mAlta sustentabilidade.\033[m.')
-                elif meio_transporte == 1 or meio_transporte == 6:
-                    print('\033[93mMédia sustentabilidade.\033[m')
-                else:
-                    print('\033[91mBaixa sustentabilidade.\033[m.')
+            print('Uso de transporte:')
+            if meio_transporte == 2 or meio_transporte == 3 or meio_transporte == 5:
+                print('\033[92mAlta sustentabilidade.\033[m')
+            elif meio_transporte == 1 or meio_transporte == 6:
+                print('\033[93mMédia sustentabilidade.\033[m')
+            else:
+                print('\033[91mBaixa sustentabilidade.\033[m')
 
-                voltar = input('Gostaria de voltar ao menu principal (s/n): ')
-                if vizualizar.lower() == 's':
-                    print('Obrigado, até a proxima vez.')
+            voltar = input('Gostaria de voltar ao menu principal (s/n): ')
+            if voltar.lower() != 's':
+                print('Obrigado, até a proxima vez.')
                 break
         
         else:
             print('\033[91mEscolha uma das opçôes disponiveis.\033[m')
     except ValueError:
-        print('\033[091mEscolha uma das opções disponíveis.\033[m')
+        print('\033[091mDigite um dos numeros disponiveis.\033[m')
+        
