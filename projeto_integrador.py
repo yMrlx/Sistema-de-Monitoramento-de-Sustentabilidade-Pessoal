@@ -4,7 +4,7 @@ hoje = datetime.datetime.today()
 
 while True:
 
-    print("\033[093mBem-vindo ao Sistema de Monitoramento de Sustentabilidade Pessoal!\033[m\n"
+    print("\033[095mBem-vindo ao Sistema de Monitoramento de Sustentabilidade Pessoal!\033[m\n"
         "1. Registrar consumo diário.\n"
         "2. Verificar nível de sustentabilidade.")
     try:
