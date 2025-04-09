@@ -71,35 +71,43 @@ while True:
 
                 print('\033[093mRegisto diario finalizado.\033[m')
 
-                vizualizar = input('Gostaria de vizualizar os seus dados registrados de hoje? (s/n): ')
-                if vizualizar.lower() != 's':
-                    print('Obrigado, até a proxima vez.')
-                    break
+                while True:
+                    vizualizar = str(input('Gostaria de vizualizar os seus dados registrados de hoje? (s/n): ')).lower()
+                    if vizualizar != 's' and vizualizar != 'n':
+                        print('\033[091mEscolha uma das opções (S/N)! Tente novamente.\033[m')
+                    else:
+                        if vizualizar =='n':
+                            print()
+                        else:
+                            print (f'Registro do dia: {hoje.strftime("%d/%m/%Y")}\n'
+                            f'Quantos litros de água você consumiu hoje? (aproximadamente): {litros_agua}\n'
+                            f'Quantos kWh de energia elétrica você consumiu hoje?: {energia}\n'
+                            f'Quantos kg de resíduos você gerou hoje?: {residuo}\n'
+                            f'Dos resíduos gerados, quantos foram reciclados? (em %): {residuo_porcentagem}\n'
+                            f'Qual o meio de transporte você usou hoje?: {meio_transporte}')
+                            if meio_transporte == 1:
+                                print('Transporte público (Ônibus, metrô, trem).')
+                            elif meio_transporte == 2:
+                                print ('Bicicleta.')
+                            elif meio_transporte == 3:
+                                print('Caminhada.')
+                            elif meio_transporte == 4:
+                                print('Carro (combustível fósseis).')
+                            elif meio_transporte == 5:
+                                print('Carro elétrico.')
+                            elif meio_transporte == 6:
+                                print('Carona compartilhada.')
+                        break
 
-                else:
-                    print (f'Registro do dia: {hoje.strftime("%d/%m/%Y")}\n'
-                    f'Quantos litros de água você consumiu hoje? (aproximadamente): {litros_agua}\n'
-                    f'Quantos kWh de energia elétrica você consumiu hoje?: {energia}\n'
-                    f'Quantos kg de resíduos você gerou hoje?: {residuo}\n'
-                    f'Dos resíduos gerados, quantos foram reciclados? (em %): {residuo_porcentagem}\n'
-                    f'Qual o meio de transporte você usou hoje?: {meio_transporte}')
-                    if meio_transporte == 1:
-                        print('Transporte público (Ônibus, metrô, trem).')
-                    elif meio_transporte == 2:
-                        print ('Bicicleta.')
-                    elif meio_transporte == 3:
-                        print('Caminhada.')
-                    elif meio_transporte == 4:
-                        print('Carro (combustível fósseis).')
-                    elif meio_transporte == 5:
-                        print('Carro elétrico.')
-                    elif meio_transporte == 6:
-                        print('Carona compartilhada.')
-
-                voltar = input('Gostaria de voltar ao menu principal (s/n): ')
-                if voltar.lower() != 's':
-                    print('Obrigado, até a proxima vez.')
-                    break
+                while True:
+                    voltar = str(input('Gostaria de voltar ao menu principal (s/n): ')).lower()
+                    if voltar != 's' and voltar != 'n':
+                        print('\033[091mEscolha uma das opções (S/N)! Tente novamente.\033[m')
+                    else:
+                        if voltar =='n':
+                            print('Obrigado, até a proxima vez.')
+                        break
+                break
             
 
         elif escolha == 2:
@@ -195,10 +203,15 @@ while True:
             else:
                 print('\033[91mBaixa sustentabilidade.\033[m')
 
-            voltar = input('Gostaria de voltar ao menu principal (s/n): ')
-            if voltar.lower() != 's':
-                print('Obrigado, até a proxima vez.')
-                break
+            while True:
+                    voltar = str(input('Gostaria de voltar ao menu principal (s/n): ')).lower()
+                    if voltar != 's' and voltar != 'n':
+                        print('\033[091mEscolha uma das opções (S/N)! Tente novamente.\033[m')
+                    else:
+                        if voltar =='n':
+                            print('Obrigado, até a proxima vez.')
+                        break
+            break
         
         else:
             print('\033[91mEscolha uma das opções disponiveis.\033[m')
