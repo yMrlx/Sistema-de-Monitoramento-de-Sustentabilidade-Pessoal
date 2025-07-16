@@ -1,2 +1,2 @@
 # Sistema-de-monitoramento-de-sustentabilidade-pessoal
-sistema de sustentabilidade feito para medir o quão sustentável você esta sendo no seu dia a dia
+Sistema feito para medir o nivel de sustentabilidade pessoal do seu dia a dia, com capacidade de registrar consumo diario e verificar nivel de sustentabilidade. O sistema conta com uma interface de "menu" com opções de para registrar seu consumo diário, verificar se você esta sendo sustentavel no dia a dia, alterar seus dados ja registrados e excluir dados ja registrados anteriormente.
